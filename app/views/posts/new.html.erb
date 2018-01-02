@@ -1,7 +1,13 @@
-<form action = '/posts/create'>
+<!-- <form action = "/posts" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PUT">
   <input type="text" name="title" />
   <textarea name = "content" placeholder="내용을 입력하세요"></textarea>
   <input type="submit" value="작성완료"/>
-</form>
+</form> -->
+
+<%= form_tag("/posts", method: "post") do %>
+  <%= text_field_tag("title") %>
+  <%= text_area_tag("content") %>
+  <%= submit_tag %>
+<% end %>

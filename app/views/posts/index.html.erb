@@ -1,21 +1,5 @@
-<h1>여기는 INDEX 입니다.</h1>
-<table class="table table-hover text-center">
-  <thead>
-    <tr>
-      <th width="15%">글번호</th>
-      <th>제목</th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @posts.each do |post| %>
-    <tr class="board" data-value="<%= post.id %>">
-      <td><%= board.id %></td>
-      <td class="title" data-id="<%= post.id %>"><%= post.title %></td>
-      <td><a href="/index/:id/show">보기</a></td>
-      <td><a href="/posts/:id/edit">수정</a></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-<a href="/index">홈으로</a>
-<a href="/posts/new">글쓰기</a>
+<% @posts.each do |post| %>
+  <p><%post.title%></p>
+  <p><%post.content%></p>
+  <!-- <p><%post.id%></p> -->
+<%end%>

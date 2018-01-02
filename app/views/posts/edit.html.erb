@@ -1,7 +1,5 @@
-<form action = 'posts/update/:id'>
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PUT">
-  <input type="text" name="title" value="<%=@post.title%>"/>
-  <textarea name = "content" value="<%=@post.content%>"></textarea>
-  <input type="submit" value="수정완료"/>
-</form>
+<%= form_tag("/posts", method: "put") do %>
+  <%= text_field_tag("title") %>
+  <%= text_area_tag("content") %>
+  <%= submit_tag %>
+<% end %>
