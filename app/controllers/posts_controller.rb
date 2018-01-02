@@ -11,6 +11,11 @@ class PostsController < ApplicationController
   end
 
   def create
+    Post.create(post_params)
+    puts "***************"
+    puts post_params
+    puts "***************"
+
     Post.create(
       title: params[:title],
       content: params[:content]
@@ -44,6 +49,11 @@ class PostsController < ApplicationController
   # 이 외의 상속받은 클래스나 객체 인스턴스에서도 접근이 불가능했음.
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  # strong parameter
+  def post_params
+    params.require(:post).permit(:title, :content)
   end
 
 end

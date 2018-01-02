@@ -1,5 +1,7 @@
+indexPage
 <% @posts.each do |post| %>
-  <p><%post.title%></p>
-  <p><%post.content%></p>
-  <!-- <p><%post.id%></p> -->
+  <p><%=post.title%></p>
+  <p><%=post.content%></p>
+  <p><a href="/posts/<%=post.id%>" >보기</a></p>
 <%end%>
+<a href="/posts/new" >글쓰기</a>
