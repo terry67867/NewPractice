@@ -53,7 +53,7 @@ class PostsController < ApplicationController
 
   # strong parameter
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :postimage)
   end
 
 end

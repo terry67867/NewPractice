@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+
+gem 'carrierwave', '~> 1.0'
 # Bootstrap4 library
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 # Generate fake data
