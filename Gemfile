@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
+#회원 권한 기능
+gem 'cancancan', '~>2.0'
+#회원가입기능
+gem 'devise'
+#파일업로더
 gem 'carrierwave', '~> 1.0'
+#이미지편집
+gem 'mini_magick'
 # Bootstrap4 library
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 # Generate fake data
@@ -9,7 +16,6 @@ gem 'faker'
 gem 'kaminari'
 # show rails db
 gem 'rails_db', group: :development
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record

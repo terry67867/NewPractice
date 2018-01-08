@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
   resources :blogs
   #index
   root 'posts#index'
@@ -15,4 +18,6 @@ Rails.application.routes.draw do
   # put '/posts/:id' => 'posts#update'
   # #Delete
   # delete '/posts/:id' => 'posts#destroy'
+
+  get '/users/index' => 'users#index'
 end
